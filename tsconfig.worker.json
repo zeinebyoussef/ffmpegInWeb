@@ -2,15 +2,15 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/app",
+    "outDir": "./out-tsc/worker",
+    "lib": [
+      "es2018",
+      "webworker"
+    ],
     "types": ["node"],
     "typeRoots": ["node_modules/@types"]
   },
-  "files": [
-    "src/main.ts",
-    "src/polyfills.ts"
-  ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.worker.ts"
   ]
 }
